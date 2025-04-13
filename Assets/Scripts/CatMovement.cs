@@ -14,6 +14,8 @@ public class CatMovement : MonoBehaviour
     public float runningSpeed = 1.5f;
     private bool isScared = false;
 
+    private bool isCollided = false;
+
     private Vector3 awayDirection;
 
     private Animator anim;
@@ -31,7 +33,6 @@ public class CatMovement : MonoBehaviour
         foreach (GameObject obj in targets)
         {
             float dist = Vector3.Distance(transform.position, obj.transform.position);
-            Debug.Log("DIST: " + dist);
 
             if (dist <= scareDistance)
             {
@@ -40,7 +41,13 @@ public class CatMovement : MonoBehaviour
                 awayDirection = transform.position - obj.transform.position;
 
                 Quaternion rot = Quaternion.LookRotation(awayDirection);
-                transform.rotation = rot;
+                rot.x = 0;
+                rot.z = 0;
+                if (!isCollided)
+                {
+                    transform.rotation = rot;
+                }
+                
 
             }
             else if (dist >= safeDistance)
@@ -49,7 +56,10 @@ public class CatMovement : MonoBehaviour
                 anim.SetInteger("Status", 1);
             }
         }
-
+        if (isCollided)
+        {
+            transform.Rotate(new Vector3(0, 3, 0));
+        }
         if (isScared)
         {
             isTurning = false;
@@ -76,7 +86,23 @@ public class CatMovement : MonoBehaviour
 
     void RotateEveryFewSeconds()
     {
-        Debug.Log("????");
         isTurning = true;
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        //Debug.Log("Collision! " + collision.transform.tag);
+        if (collision.transform.tag != "terrain")
+        {
+            isCollided = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.transform.tag != "terrain")
+        {
+            isCollided = false;
+        }
     }
 }

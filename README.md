@@ -1,6 +1,6 @@
 # 🎮 Escape - 3D Animation Assignment
 
-This is a Unity 6 project for our 3D Animation course.  
+This is a Unity project for our 3D Animation course.  
 We are using Git LFS to manage large assets such as textures, models, and environment files (e.g., Horror_Mansion).  
 Please follow the setup steps below to ensure everything works correctly.
 
@@ -8,7 +8,7 @@ Please follow the setup steps below to ensure everything works correctly.
 
 ## 🧰 Requirements
 
-- Unity 6
+- Unity **6000.0.45f1**
 - Git
 - Git LFS (Large File Storage)
 
@@ -16,13 +16,13 @@ Please follow the setup steps below to ensure everything works correctly.
 
 ## 🔁 First-time Setup
 
-### 💻 Clone the repository
-
-Make sure you clone the `develop` branch instead of `main`:
+### 💻 Clone the repository and switch to the develop branch
 
 ```bash
-git clone -b develop https://github.com/josh79622/Escape.git
+git clone https://github.com/josh79622/Escape.git
 cd Escape
+git checkout develop
+git pull origin develop
 ```
 
 ### 💡 Install Git LFS (Only Once)
@@ -58,33 +58,42 @@ Without this step, large Unity assets like `Horror_Mansion` will not work correc
 
 ## 🚧 Development Guidelines
 
-🚨 **DO NOT commit or push directly to the `main` branch.**
+🚨 **DO NOT commit or push directly to the `main` or `develop` branches.**  
+Create your own feature branch to work from.
 
-We use the `main` branch as the **production** branch, and only allow merges from `develop` via pull request.
+---
 
-### Development Flow
+### 🛠 Recommended Workflow
 
-1. Pull the latest changes from `develop`:
+1. Make sure you're on the latest `develop`:
 
-   ```bash
-   git pull origin develop
-   ```
+```bash
+git checkout develop
+git pull origin develop
+```
 
-2. Create a new feature branch from `develop`:
+2. Create a new personal feature branch (e.g., `josh/sprint1`):
 
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
+```bash
+git checkout -b josh/sprint1
+```
 
-3. Make changes, then commit and push:
+3. Make changes in Unity
 
-   ```bash
-   git add .
-   git commit -m "Describe your changes"
-   git push origin feature/your-feature-name
-   ```
+4. Stage and commit your changes:
 
-4. Open a **pull request to `develop`** on GitHub.
+```bash
+git add .
+git commit -m "Describe what you did here"
+```
+
+5. Push your feature branch to GitHub:
+
+```bash
+git push -u origin josh/sprint1
+```
+
+6. Open a **Pull Request** on GitHub to merge your branch into `develop`.
 
 ---
 
@@ -93,7 +102,7 @@ We use the `main` branch as the **production** branch, and only allow merges fro
 Please use the following scene for development:
 
 ```text
-Assets/Scenes/Horror Mansion.unity
+Assets > Scenes > Intro.unity
 ```
 
 Open this scene in Unity and continue building from there.
@@ -118,3 +127,50 @@ Also verify that Git LFS is correctly installed and initialized on your system.
 - [Add team member names here]
 
 ---
+
+## 🔐 How to Generate a GitHub Token (For Push Access)
+
+GitHub no longer allows password authentication when pushing from the terminal. Instead, use a **Personal Access Token (PAT)**.
+
+Follow these steps:
+
+### ✅ Step 1: Create your token
+
+1. Go to: [https://github.com/settings/tokens](https://github.com/settings/tokens)
+2. Click **"Fine-grained tokens"** or **"Classic tokens"**
+3. Click **"Generate new token"**
+4. Set:
+   - **Name**: e.g. `Escape Project Token`
+   - **Expiration**: 30 days, 60 days, or No expiration
+   - **Permissions**:
+     - ✅ `repo` (for full access to repositories)
+     - Optional: `workflow` if you use GitHub Actions
+5. Click **Generate token**
+6. 🔐 **Copy the token and store it safely** – You won't see it again!
+
+### ✅ Step 2: Set the token in your terminal
+
+When you do this for the first time:
+
+```bash
+git push
+```
+
+Git will ask for:
+
+- **Username** → enter your GitHub username  
+- **Password** → paste the **token** (not your password)
+
+💡 To save the token, you can use a credential helper:
+
+#### macOS:
+```bash
+git config --global credential.helper osxkeychain
+```
+
+#### Windows:
+```bash
+git config --global credential.helper wincred
+```
+
+From now on, Git will remember your token securely and let you push without reentering it.

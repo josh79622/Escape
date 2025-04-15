@@ -72,10 +72,10 @@ git checkout develop
 git pull origin develop
 ```
 
-2. Create a new personal feature branch (e.g., `josh/sprint1`):
+2. Create a new personal feature branch (e.g., `LadyGaga/sprint1`):
 
 ```bash
-git checkout -b josh/sprint1
+git checkout -b LadyGaga/sprint1
 ```
 
 3. Make changes in Unity
@@ -90,7 +90,7 @@ git commit -m "Describe what you did here"
 5. Push your feature branch to GitHub:
 
 ```bash
-git push -u origin josh/sprint1
+git push -u origin LadyGaga/sprint1
 ```
 
 6. Open a **Pull Request** on GitHub to merge your branch into `develop`.

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 308933d3610934a28b33c0486199e024
+guid: 9e428e663c30e454d9b0e6367b9e9ca3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -42,15 +42,15 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
+      loopTime: 0
+      loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 1
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 0
+      keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
-      heightFromFeet: 1
+      heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -526,13 +526,13 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Ch11_nonPBR@Walking(Clone)
+    - name: Walking(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Hips
-      parentName: Ch11_nonPBR@Walking(Clone)
+      parentName: Walking(Clone)
       position: {x: 0.00008507408, y: 0.94238675, z: 0.012323631}
       rotation: {x: 0.017020674, y: -0.01658609, z: -0.008026078, w: 0.99968535}
       scale: {x: 1, y: 1, z: 1}
@@ -548,8 +548,8 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:LeftFoot
       parentName: mixamorig:LeftLeg
-      position: {x: -0.00000018626451, y: 0.37906775, z: 0.00000007357448}
-      rotation: {x: 0.43151498, y: -0.08904638, z: 0.04980327, w: 0.89631754}
+      position: {x: -0, y: 0.379065, z: 0}
+      rotation: {x: 0.43181992, y: -0.081341565, z: 0.046424743, w: 0.8970841}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:LeftToeBase
       parentName: mixamorig:LeftFoot
@@ -573,8 +573,8 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:RightFoot
       parentName: mixamorig:RightLeg
-      position: {x: 0.000000052154064, y: 0.37912974, z: -0.00000003259629}
-      rotation: {x: 0.5408783, y: 0.07187492, z: 0.009769463, w: 0.83796734}
+      position: {x: -0, y: 0.379131, z: 0}
+      rotation: {x: 0.48301372, y: 0.06792362, z: 0.0051758084, w: 0.87295896}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:RightToeBase
       parentName: mixamorig:RightFoot

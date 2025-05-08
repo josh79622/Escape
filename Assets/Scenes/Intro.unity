@@ -8267,10 +8267,6 @@ PrefabInstance:
       value: 0.9931579
       objectReference: {fileID: 0}
     - target: {fileID: 94658409851648317, guid: c0ec2cd63f93487d92d6623d393c83ba, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9931579
-      objectReference: {fileID: 0}
-    - target: {fileID: 94658409851648317, guid: c0ec2cd63f93487d92d6623d393c83ba, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.115253404
       objectReference: {fileID: 0}
@@ -53879,6 +53875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Books_11
       objectReference: {fileID: 0}
+    - target: {fileID: 1986429805207004436, guid: 6d660630f5ee4c34a90f92bd96d0dc52, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -72329,17 +72329,61 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1874959895421084666, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.26156616
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874959895421084666, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.034826323
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874959895421084666, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.332483
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874959895421084666, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99886096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874959895421084666, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.04737239
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874959895421084666, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0056656315
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874959895421084666, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0007056484
+      objectReference: {fileID: 0}
     - target: {fileID: 2894881452414034270, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
       propertyPath: m_Name
       value: Mirror
       objectReference: {fileID: 0}
+    - target: {fileID: 5215256150104984049, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
+      propertyPath: field of view
+      value: 58.357193
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215256150104984049, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
+      propertyPath: near clip plane
+      value: 0.8954299
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764263250999614082, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 898123210}
+    - target: {fileID: 7764263250999614082, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
+      propertyPath: nearPointOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924119046109859270, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 272.466
+      value: 272
       objectReference: {fileID: 0}
     - target: {fileID: 7924119046109859270, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.291
+      value: 7.35
       objectReference: {fileID: 0}
     - target: {fileID: 7924119046109859270, guid: 623ac322709e242599b1dfa439a57d78, type: 3}
       propertyPath: m_LocalPosition.z
@@ -85692,13 +85736,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Framed_Photo_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1484559557483536399, guid: ecf2bb5f7005a284d978605a3c70423b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2292868367558113973, guid: ecf2bb5f7005a284d978605a3c70423b, type: 3}
       propertyPath: m_RootOrder
       value: 336
       objectReference: {fileID: 0}
     - target: {fileID: 2292868367558113973, guid: ecf2bb5f7005a284d978605a3c70423b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 271.76477
+      value: 272
       objectReference: {fileID: 0}
     - target: {fileID: 2292868367558113973, guid: ecf2bb5f7005a284d978605a3c70423b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -85706,7 +85754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2292868367558113973, guid: ecf2bb5f7005a284d978605a3c70423b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 247.65787
+      value: 248
       objectReference: {fileID: 0}
     - target: {fileID: 2292868367558113973, guid: ecf2bb5f7005a284d978605a3c70423b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -98726,6 +98774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_Cross_05
       objectReference: {fileID: 0}
+    - target: {fileID: 7104720637029033148, guid: 6c6b3580ede127c42bce889552fca247, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7625396170465017350, guid: 6c6b3580ede127c42bce889552fca247, type: 3}
       propertyPath: m_RootOrder
       value: 337
@@ -102447,6 +102499,10 @@ PrefabInstance:
     - target: {fileID: 1522441024616504597, guid: c2198a252f5f51848a0de772be827283, type: 3}
       propertyPath: m_Name
       value: Vase_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522441024616504597, guid: c2198a252f5f51848a0de772be827283, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2191877148121221039, guid: c2198a252f5f51848a0de772be827283, type: 3}
       propertyPath: m_RootOrder
@@ -134241,3 +134297,10 @@ SceneRoots:
   - {fileID: 4304498003820319980}
   - {fileID: 6304842133027929296}
   - {fileID: 196815061}
+  - {fileID: 303510770}
+  - {fileID: 1500445443}
+  - {fileID: 898123210}
+  - {fileID: 1136765774}
+  - {fileID: 2376419913847002586}
+  - {fileID: 7155431000490522591}
+  - {fileID: 8488669212900059197}
